@@ -1,0 +1,896 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+//*::-webkit-input-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*:-moz-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*::-moz-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*:-ms-input-placeholder
+//  color: #666
+//  opacity: 1
+//
+//body input:focus:required:invalid,
+//body textarea:focus:required:invalid
+//  color: #666
+//
+//body input:required:valid,
+//body textarea:required:valid
+//  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #1D1D1B
+  color: #fff
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0 19px
+  box-sizing: border-box
+  font-family: $default-font
+  font-size: 14px
+  width: 100%
+  height: 37px
+  border: 1px solid #E30613
+    radius: 10px
+  color: #fff
+  background: transparent
+  &::placeholder
+    color: #fff
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+label
+  display: block
+  margin: 0 0 23px
+
+button, .btn
+  outline: none
+  padding: 0
+  box-shadow: none
+  font-family: $default-font
+  border: none
+    radius: 0
+  background: transparent
+  margin: 0
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn
+  height: 40px
+  max-width: 216px
+  width: 100%
+  border-radius: 10px
+  font-size: 14px
+  font-weight: bold
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+.btn-xl
+  height: 50px
+  max-width: 261px
+  font-weight: normal
+
+.btn-border
+  background: transparent
+  border: 1px solid $accent
+    radius: 10px
+  color: #fff
+  &:hover
+    background: $accent
+    color: #fff
+
+.btn-accent
+  background: $accent
+  color: #fff
+  &:hover
+    background: $green
+    color: #fff
+
+.color-white
+  color: #fff
+
+a.color-white
+  &:hover
+    color: $accent
+
+.color-green
+  color: $green
+
+.list-social
+  display: flex
+  align-items: center
+  li
+    margin: 0 35px 0 0
+    &:last-child
+      margin: 0
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 35px
+      img
+        max-height: 100%
+      &:hover
+        opacity: .8
+
+.container
+  max-width: 1750px
+
+
+h1, h2
+  font-family: $title-font
+  font-weight: 900
+  width: 100%
+
+h1
+  font-size: 96px
+  line-height: 115px
+
+h2
+  font-size: 36px
+  margin: 0 0 58px
+
+h3
+  font-size: 24px
+  font-weight: bold
+  text-transform: uppercase
+  line-height: 33px
+  width: 100%
+
+.decor-section
+  .container
+    position: relative
+    padding-top: 56px
+    &:before
+      content: ''
+      position: absolute
+      left: 15px
+      top: 0
+      width: 262px
+      height: 1px
+      background: $green
+
+.mb-15
+  margin-bottom: 15px
+
+.mb-25
+  margin-bottom: 25px
+
+.mb-27
+  margin-bottom: 27px
+
+.mb-30
+  margin-bottom: 30px
+
+.mb-53
+  margin-bottom: 53px
+
+.box-text
+  font-size: 24px
+  line-height: 33px
+  p
+    margin: 0 0 30px
+    &:last-child
+      margin: 0
+
+.slick-slider
+  width: 100%
+
+.slick-slide
+  outline: none
+
+section
+  position: relative
+  z-index: 1
+
+strong
+  font-weight: bold
+  display: inline-block
+/*==========  header  ==========*/
+header
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+  padding: 58px 0
+  color: #fff
+  font-size: 14px
+
+.phone
+  font-size: 24px
+  font-weight: bold
+  white-space: nowrap
+
+.menu
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 39px 0 75px
+  li
+    margin: 0 26px 0 0
+    &:last-child
+      margin: 0
+    a
+      color: #fff
+      &:hover
+        color: $accent
+
+.btn-burger
+  width: 24px
+  cursor: pointer
+  display: none
+  margin: 0 0 0 10px
+  span
+    display: block
+    width: 100%
+    height: 2px
+    border-radius: 3px
+    background: #fff
+    margin: 0 0 5px
+    &:last-child
+      margin: 0
+
+.logo
+  display: flex
+  align-items: center
+  max-width: 116px
+  img
+    width: 100%
+
+
+.mobile-menu
+  position: fixed
+  right: 0
+  top: 0
+  width: 100%
+  max-width: 280px
+  padding: 30px
+  z-index: 7
+  overflow-y: auto
+  height: 100%
+  background: #1D1D1B
+  color: #fff
+  box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.15)
+  display: none
+  a
+    color: #fff
+  .logo
+    max-width: 120px
+    margin: 0 auto 30px
+  .menu
+    margin: 20px 0
+    width: 100%
+    font-size: 18px
+    li
+      margin: 0 0 15px
+      width: 100%
+  .phone, .mail
+    font-size: 20px
+  .mail
+    margin: 10px 0 20px
+  .list-social
+    li
+      margin: 0 15px 0 0
+      a
+        height: 30px
+
+.btn-close
+  position: relative
+  width: 20px
+  height: 20px
+  cursor: pointer
+  margin: 0 0 20px auto
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 10px
+    top: 0
+    background: #fff
+    width: 2px
+    height: 100%
+    border-radius: 3px
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+/*==========  header end  ==========*/
+
+
+/*==========  home  ==========*/
+main
+  position: relative
+  z-index: 1
+  padding: 241px 0 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: -806px
+    width: 2358px
+    height: 1575px
+    opacity: 0.3
+    background: linear-gradient(360deg, #1D1D1B 0%, rgba(29, 29, 27, 0) 63.66%), url('../img/bg1.jpeg') no-repeat center
+      size: cover
+
+.home
+  padding: 241px 0 227px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: -120px
+    width: 1484px
+    height: 991px
+    opacity: 0.3
+    background: linear-gradient(360deg, #1D1D1B 0%, rgba(29, 29, 27, 0) 63.66%), url('../img/bg1.jpeg') no-repeat center
+      size: cover
+
+.home-content
+  position: relative
+  z-index: 1
+
+.subtitle
+  font-size: 48px
+  font-weight: 300
+  margin: 61px 0 0
+  max-width: 640px
+  width: 100%
+
+.home-img
+  position: absolute
+  bottom: -80px
+  right: -64px
+  width: 1174px
+  height: 1174px
+  filter: drop-shadow(0px 44px 104px rgba(0, 0, 0, 0.8))
+  border-radius: 50%
+  //overflow: hidden
+  img
+
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 50%
+
+/*==========  home end  ==========*/
+
+
+/*==========  category  ==========*/
+.category
+  position: relative
+  z-index: 1
+  h2
+    margin: 0 0 73px
+
+.category-box
+  width: 100%
+  height: 100%
+  text-align: center
+  font-size: 24px
+  &__img
+    height: 410px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto 30px
+    border-radius: 30px
+    filter: drop-shadow(0px 24px 44px rgba(0, 0, 0, 0.65))
+    img
+      max-height: 100%
+
+  &__title
+    color: #fff
+    &:hover
+      color: $accent
+/*==========  category end  ==========*/
+
+
+/*==========  about  ==========*/
+.about
+  padding: 107px 0 0
+  h2
+    margin: 0 0 62px
+
+
+.about-img
+  width: 100%
+  height: 743px
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.about-img-xs
+  height: 283px
+
+.about-img-sm
+  height: 647px
+/*==========  about end  ==========*/
+
+
+
+/*==========  certificate  ==========*/
+.certificate
+  .container
+    padding-top: 96px
+  h2
+    margin: 0 0 58px
+
+.certificate-slider
+  min-width: 2000px
+  float: right
+  .slick-slide
+    margin: 0 0 0 26px
+
+.certificate-box
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 379px
+  height: 542px
+  overflow: hidden
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.certificate-content
+  padding: 0 0 0 25px
+/*==========  certificate end  ==========*/
+
+
+/*==========  callback  ==========*/
+.callback
+  padding: 175px 0
+
+.callback-wrapper
+  width: 100%
+  border: 1px solid #E30613
+    radius: 10px
+  padding: 46px 104px 20px 76px
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  .form
+    width: calc(100% - 398px)
+
+.callback-content
+  max-width: 398px
+  width: 100%
+  padding: 0 80px 0 0
+  .box-text
+    font-size: 18px
+    line-height: 33px
+    margin: 13px 0 0
+
+.consent
+  text-align: center
+  width: 100%
+  margin: 15px auto 0
+  color: #919191
+  font-size: 10px
+
+.form
+  button
+    max-width: none
+/*==========  callback end  ==========*/
+
+
+/*==========  footer  ==========*/
+footer
+  position: relative
+  padding: 58px 0 73px
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translate(-50%,0)
+    top: 0
+    height: 1px
+    width: calc(100% - 30px)
+    max-width: 1720px
+    background: $green
+  .list-social
+    margin: 0 90px 0 0
+  .phone
+    margin: 0 135px 0 90px
+    font-size: 48px
+
+
+.footer-box
+  line-height: 33px
+  font-size: 12px
+  margin: 0 73px 0 auto
+
+/*==========  footer end  ==========*/
+
+
+/*==========  modal  ==========*/
+.modal-content
+  border: none
+    radius: 10px
+  padding: 30px
+  background: #1D1D1B
+
+.modal-header
+  padding: 0
+  border: none
+  .close
+    width: 20px
+    height: 20px
+    position: absolute
+    z-index: 1
+    opacity: 1
+    padding: 0
+    right: 15px
+    top: 15px
+    margin: 0
+    &:before, &:after
+      content: ''
+      position: absolute
+      left: 10px
+      top: 0
+      background: $accent
+      width: 2px
+      height: 100%
+      border-radius: 3px
+    &:before
+      transform: rotate(45deg)
+    &:after
+      transform: rotate(135deg)
+
+.modal-title
+  text-align: center
+  width: 100%
+  font-size: 22px
+  margin: 0 auto 30px
+
+.modal-body
+  padding: 0
+  .form
+    width: 100%
+    margin: 0 auto
+    label
+      width: 100%
+      margin: 0 0 15px
+      max-width: none
+    button
+      margin: 0 auto
+
+/*==========  modal end  ==========*/
+
+
+/*==========  catalog  ==========*/
+.catalog
+  padding: 252px 0 90px
+
+.catalog-wrapper
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  width: 100%
+  margin: 0 0 84px
+  h1
+    max-width: 500px
+    width: 100%
+
+.catalog-text
+  width: calc(100% - 500px)
+  padding: 0 0 0 84px
+  border-left: 1px solid $green
+
+.product-card
+  width: 100%
+  height: 100%
+  border: 1px solid #E30613
+    radius: 10px
+  padding: 27px 25px 25px
+  text-align: center
+  font-size: 24px
+  font-weight: bold
+  &__img
+    width: 100%
+    height: 341px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 10px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__body
+    padding: 34px 0 0
+    width: 100%
+    height: calc(100% - 341px)
+    display: flex
+    flex-direction: column
+  &__title
+    text-align: center
+    color: #fff
+    &:hover
+      color: $accent
+
+  .btn
+    margin: auto auto 0
+    font-size: 14px
+
+.price
+  margin: 0 auto 34px
+
+.weight
+  margin: 16px auto 10px
+  text-align: center
+  color: $green
+  font-weight: normal
+/*==========  catalog end  ==========*/
+
+
+/*==========  product  ==========*/
+.links-prev
+  display: flex
+  align-items: center
+  color: $green
+  font-weight: bold
+  margin: 0 0 45px
+  font-size: 14px
+  &__icon
+    margin: 0 20px 0 0
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 15px
+    height: 21px
+  &:hover
+    color: $accent
+
+.product-page
+  padding: 228px 0 182px
+  h1
+    margin: 0 0 36px
+    
+  .price
+    margin: 37px 0 auto
+    text-align: left
+    padding: 63px 0 0
+    position: relative
+    font-size: 48px
+    font-weight: bold
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      max-width: 345px
+      width: 100%
+      height: 1px
+      background: $green
+
+
+
+.product-page-wrapper
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+
+.product-image
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  max-width: 572px
+  width: 100%
+  height: 572px
+  border-radius: 10px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.product-content
+  width: calc(100% - 572px)
+  padding: 0 0 0 75px
+  display: flex
+  flex-direction: column
+
+
+/*==========  product end  ==========*/
+
+
+/*==========  delivery  ==========*/
+.payment
+  padding: 204px 0 78px
+  h2
+    margin: 0 0 76px
+
+.payment-box
+  width: 100%
+  height: 100%
+  border: 1px solid #E30613
+    radius: 10px
+  padding: 30px 55px 30px 46px
+  .box-text
+    font-size: 16px
+    line-height: 26px
+    p
+      margin: 0 0 25px
+      &:last-child
+        margin: 0
+  h3
+    text-transform: uppercase
+    color: $green
+    margin: 0 0 32px
+
+.payment-box.h-auto
+  height: auto
+
+.delivery
+  padding: 0 0 90px
+  .box-text
+    font-size: 18px
+    line-height: 26px
+    ul, p
+      margin: 0 0 25px
+  .box-text-description
+    font-size: 16px
+  h3
+    margin: 0 0 38px
+    color: $green
+  h2
+    font-size: 24px
+    margin: 0 0 38px
+
+.warranty-box
+  padding: 0 0 0 35px
+  .box-text
+    font-size: 16px
+
+.box-text-description
+  margin: 22px 0 0
+
+.list-dots
+  list-style: disc
+  padding: 0 0 0 20px
+
+.delivery-box
+  padding: 0 52px 0 0
+  border-right: 1px solid $green
+
+/*==========  delivery end  ==========*/
+
+
+/*==========  contacts  ==========*/
+.contacts
+  padding: 204px 0 127px
+  h1
+    margin: 0 0 80px
+  .mail, .phone
+    font-size: 48px
+  .mail
+    margin: 56px 0 60px
+  .callback-wrapper
+    width: 100%
+    padding: 46px 44px 38px
+    max-width: 408px
+    .box-text
+      text-align: center
+      margin: 13px auto 29px
+      max-width: 278px
+  .callback-content
+    width: 100%
+    padding: 0
+  h3
+    text-align: center
+  .form
+    width: 100%
+    padding: 0
+  .consent
+    margin: 19px auto 0
+    max-width: 197px
+  label
+    margin: 0 0 27px
+
+.map
+  width: 100%
+  height: 802px
+  iframe
+    width: 100%
+    height: 100%
+
+.social
+  margin: 43px 0 0
+  p
+    font-size: 18px
+    margin: 0 0 23px
+/*==========  contacts end  ==========*/
+
+
+
+@import "media"
+// Всегда в конце
